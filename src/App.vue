@@ -1,25 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Header></Header>
+    <div class="mainbody"><router-view></router-view></div>
+    <Footer></Footer>
   </div>
 </template>
+<script>
+import Header from './components/Header'
+import Footer from './components/Footer'
+export default{
+  name:'App',
+  components:{
+    Header,Footer
+  }
+}
+</script>
 <style lang="stylus">
+*
+  padding 0
+  margin 0
+  box-sizing border-box
+ol,ul
+  list-style none
+.clearfix::after
+  content ''
+  display block
+  clear both
+a
+  color inherit
+  text-decoration none
 #app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-
-#nav
-  padding 30px
-  a
-    font-weight bold
-    color #2c3e50
-    &.router-link-exact-active
-      color #42b983
+  background #E1E1E1
+.mainbody
+  min-height 80vh
+header,section,footer,asdie,nav,article
+  display block
 </style>
