@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0e95df"],{"8cdb":function(t,e,n){"use strict";n.r(e);var a=function(){var t=this,e=t.$createElement;t._self._c;return t._m(0)},c=[function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"not-match"},[t._v("\n    页面不见了，这是一个404页面！\n    "),n("a",{attrs:{href:"/"}},[t._v("回到首页")])])}],r={name:"404"},s=r,u=n("2877"),i=Object(u["a"])(s,a,c,!1,null,"61d1ab12",null);e["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d0e95df.75a4bba2.js.map
