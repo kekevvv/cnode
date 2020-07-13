@@ -28,6 +28,7 @@
                         <span class="last_reply_time">{{topic.last_reply_at | formatDate}}</span>
                     </li>
                 </ul>
+                <Pagination @handle="renderList"></Pagination>
             </div>
         </main>
     </div>
@@ -35,12 +36,14 @@
 <script>
 import Loading from '@/components/Loading'
 import Sidebar from '@/components/Sidebar'
+import Pagination from '@/components/Pagination'
 export default{
   name:'Home',
   data(){
       return {
           isLoading:false,
-          topics:[]
+          topics:[],
+          currentPage:1,
       }
   },
   created(){
@@ -52,7 +55,7 @@ export default{
           this.$http.get('https://cnodejs.org/api/v1/topics',{
               params:{
                     limit:30,
-                    page:1,
+                    page:this.currentPage,
                     tab:this.$route.query.tab
               }
           })
@@ -63,6 +66,10 @@ export default{
           .catch((err)=>{
               console.log(err)
           })
+      },
+      renderList(value){
+          this.currentPage = value
+          this.fetchTopics()
       }
   },
   watch:{
@@ -74,7 +81,7 @@ export default{
       }
   },
   components:{
-    Loading,Sidebar
+    Loading,Sidebar,Pagination
   },
 }
 </script>

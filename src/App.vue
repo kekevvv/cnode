@@ -22,10 +22,7 @@ export default{
   box-sizing border-box
 ol,ul
   list-style none
-.clearfix::after
-  content ''
-  display block
-  clear both
+;
 a
   color inherit
   text-decoration none

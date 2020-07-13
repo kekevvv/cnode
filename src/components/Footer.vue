@@ -2,7 +2,7 @@
     <footer>
             <ul>
                 <li>
-                    <a href="#" target="_blank">源码地址</a>
+                    <a href="https://github.com/kekevvv/cnode" target="_blank">源码地址</a>
                 </li>
                 <li>
                     <a href="https://cnodejs.org" target="_blank">
